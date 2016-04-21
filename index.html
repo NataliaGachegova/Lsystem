@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<style type="text/css" media="screen">
+			body { margin: 0; padding: 15px; border-top: solid 10px #000; }
+			canvas { border: solid 1px #999; }	
+			#controls { font-family: "Lucida Grande", Helvetica, Arial, sans-serif; font-size: 11px; margin-bottom: 10px; }
+			#controls input[type="text"] { border: solid 1px #ccc; font-weight: bold; padding: 2px; font-size: 12px; width: 35px; margin-right: 10px; }
+			#controls input#axiom { width: 75px; }
+			#controls input#ruleset { width: 200px; }
+		</style>
+	</head>
+	<body>
+		<div id="controls">
+			<form action="" onsubmit="generate(); return false;">
+			Axiom: <input type="text" id="axiom" name="axiom" value="" />
+			Ruleset: <input type="text" id="ruleset" name="ruleset" value="" />
+			Angle: <input type="text" id="angle" name="angle" value="" />
+			Iterations: <input type="text" id="iterations" name="iterations" value="" />
+			Zoom: <input type="text" id="zoom" name="zoom" value="" />
+			X: <input type="text" id="x" name="x" value="" />
+			Y: <input type="text" id="y" name="y" value="" />
+
+
+			<input id="generateButton" type="submit" value="Generate" />
+		</form>
+		</div>
+		<canvas width="1200" height="600"></canvas>
+
+		<script>
+			var canvas = document.getElementsByTagName('canvas')[0];
+			var context = canvas.getContext('2d');
+		</script>
+		<script type="text/javascript" charset="utf-8" src="lsystem.js"></script>
+	</body>
+</html>
